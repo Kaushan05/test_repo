@@ -1,0 +1,71 @@
+<form [formGroup]="Register" (ngSubmit)="onSubmit">
+    <label>First Name :
+    <input type="text"  pInputText formControlName="FirstName">
+    </label>
+    <br><br>
+    <label>Last Name :
+        <input type="text" pInputText formControlName="LastName">
+    </label><br><br>
+    <div class="flex flex-wrap gap-3">
+        <span>Gender :</span>
+        <div class="flex align-items-center">
+          <p-radioButton
+            label="Female"
+            
+            value="Female"
+            formControlName="Gender">
+          </p-radioButton>
+        </div>
+    
+        <div class="flex align-items-center">
+          <p-radioButton
+            label="Male"
+        
+            value="Male"
+            formControlName="Gender">
+          </p-radioButton>
+        </div>
+    
+        <div class="flex align-items-center">
+          <p-radioButton
+            label="Transgender"
+        
+            value="Transgender"
+            formControlName="Gender">
+            </p-radioButton>
+        </div>
+    </div>
+    <div>
+    <label>Phone Number :
+        <p-inputMask mask="999-999-9999" formControlName="PhoneNum"  placeholder="999-999-9999"></p-inputMask>
+        </label><br><br>
+    </div>
+    <div>
+        <label>Email :
+            <input pInputText type="email" formControlName="Mail">
+        </label><br><br>
+    </div>
+
+    <div>
+        <label id="label" for="add1">Address 1:</label>
+        <textarea rows="6" cols="50" pInputTextarea formControlName="Address" id="add1"></textarea>
+    </div>
+
+    <div>
+        <label id="label1" for="add2">Address 2 :</label>
+        <textarea rows="6" cols="50" pInputTextarea formControlName="Address2" id="add2"></textarea>
+    </div>
+
+    
+    <div class="card flex justify-content-center">
+        <p-dropdown formControlName="State" [options]="States" placeholder="Select a State" optionLabel="name"></p-dropdown>
+    </div>
+
+<p-button (click)="onSubmit()">Submit</p-button>
+
+</form>
+
+
+
+ 
+ 

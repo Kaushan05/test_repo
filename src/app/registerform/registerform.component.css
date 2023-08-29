@@ -1,0 +1,15 @@
+/* #kooo{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+} */
+
+#label{
+    /* position: relative;
+    bottom: 100px; */
+    float: left;
+}
+
+#label1{
+    float: left;
+}
